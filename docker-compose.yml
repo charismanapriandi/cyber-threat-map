@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  api:
+    build:
+        context: ./
+        target: laronapi
+    ports:
+      - 4300:4300
+    restart: always

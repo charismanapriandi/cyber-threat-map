@@ -1,0 +1,17 @@
+.col-md-2.sidebar.sidebar-left.sidebar-animate.sidebar-md-show.no-padding,
+.col-xs-12.col-sm-12.col-md-10.label-project-second.nav-fixed, .header-content, .header.col-md-12.content-page {
+	display: none;
+}
+
+.data-report {
+	margin-top: -1000px;
+}
+
+.report-detail.col-sm-8 {
+	width: 20%;
+	float: right;
+}
+
+.col-md-2.sidebar.sidebar-left {
+	display: none;
+}
