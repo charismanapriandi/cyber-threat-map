@@ -5,6 +5,7 @@ const util = require("util");
 const { Pool } = require("pg");
 require("dotenv").config();
 const maps_id = require('../public/id.json');
+const { join } = require("path");
 const pool = new Pool({
     user: process.env.DATABASE_USER,
     host: process.env.DATABASE_HOST,
@@ -180,7 +181,7 @@ router.get("/", async function(req, res, next) {
             // const data = { data: datanya };
             const csv = await resultsToCSV(rows);
 
-            const filename = "/maps/output.csv";
+            const filename = join(__dirname, 'maps', "output.csv");
             // const filename = "maps/output.csv";
 
             await saveCSVToFile(filename, csv);
@@ -199,7 +200,7 @@ router.get("/", async function(req, res, next) {
             client.release();
         }
     } catch (error) {
-        const filename = "/maps/output.csv";
+        const filename = join(__dirname, 'maps', "output.csv");
         // const filename = "maps/output.csv";
         const base64EncodedCSV = await readCSVAndEncode(filename);
 
