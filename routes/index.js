@@ -180,7 +180,7 @@ router.get("/", async function(req, res, next) {
             // const data = { data: datanya };
             const csv = await resultsToCSV(rows);
 
-            const filename = "../maps/output.csv";
+            const filename = "./maps/output.csv";
             // const filename = "maps/output.csv";
 
             await saveCSVToFile(filename, csv);
@@ -199,7 +199,7 @@ router.get("/", async function(req, res, next) {
             client.release();
         }
     } catch (error) {
-        const filename = "../maps/output.csv";
+        const filename = "./maps/output.csv";
         // const filename = "maps/output.csv";
         const base64EncodedCSV = await readCSVAndEncode(filename);
 
