@@ -8,7 +8,11 @@
   ],
   "rewrites": [
     { 
-      "source": "/**/*",
+      "source": "/(.*)",
+      "destination": "/"
+    },
+    { 
+      "source": "/public/bootstrap/css/(.*)",
       "destination": "/"
     }
   ]
