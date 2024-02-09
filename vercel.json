@@ -12,7 +12,7 @@
       "destination": "/"
     },
     { 
-      "source": "/public/bootstrap/css/(.*)",
+      "source": "/public/assets/bootstrap/css/(.*)",
       "destination": "/"
     }
   ]
