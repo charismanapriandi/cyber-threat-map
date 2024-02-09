@@ -8,12 +8,8 @@
   ],
   "rewrites": [
     { 
-      "source": "/:path*",
-      "destination": "/:path*"
-    },
-    { 
-      "source": "/public/:path*",
-      "destination": "/:path*"
+      "source": "/**/*",
+      "destination": "/"
     }
   ]
 }
